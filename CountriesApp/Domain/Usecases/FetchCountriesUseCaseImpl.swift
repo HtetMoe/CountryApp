@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import Combine
+
+class FetchCountriesUseCaseImpl: FetchCountriesUseCase {
+    private let countryRepository: CountryRepository
+    
+    init(countryRepository: CountryRepository) {
+        self.countryRepository = countryRepository
+    }
+    
+    func execute() -> AnyPublisher<[Country], Error> {
+        return countryRepository.fetchCountries()
+    }
+}

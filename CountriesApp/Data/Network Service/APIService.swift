@@ -10,17 +10,7 @@ import Combine
 import Foundation
 
 protocol APIService {
-    func request(url: String) -> AnyPublisher<[Country], AFError>
+    func request<T: Decodable>(_ url: String, type: T.Type) -> AnyPublisher<T, Error>
 }
 
-
-class APIServiceImpl: APIService {
-    func request(url: String) -> AnyPublisher<[Country], AFError> {
-        return AF.request(url)
-            .validate()
-            .publishDecodable(type: [Country].self)
-            .value()
-            .eraseToAnyPublisher()
-    }
-}
 

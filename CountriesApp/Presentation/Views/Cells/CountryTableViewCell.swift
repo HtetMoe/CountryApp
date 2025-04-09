@@ -2,7 +2,7 @@
 //  CountryTableViewCell.swift
 //  CountriesApp
 //
-//  Created by Htet Moe Phyu on 4/8/25.
+//  Created by Htet Moe Phyu on 4/9/25.
 //
 
 import UIKit
@@ -24,25 +24,19 @@ class CountryTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
-        // Configure labels and add them to the content view
         [nameRegionLabel, codeLabel, capitalLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.numberOfLines = 0
             contentView.addSubview($0)
         }
         
-        // Configure nameRegionLabel with a darker text color
         nameRegionLabel.textColor = .darkGray // Make it darker
         nameRegionLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        
-        // Configure codeLabel (keeping it as is)
         codeLabel.textAlignment = .right
         
-        // Configure capitalLabel to be smaller and dimmer
         capitalLabel.textColor = .gray // Make it dimmer
         capitalLabel.font = UIFont.systemFont(ofSize: 14) // Make the font smaller
         
-        // Set up constraints in one place
         NSLayoutConstraint.activate([
             nameRegionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             nameRegionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),

@@ -17,13 +17,12 @@ class CountriesViewModel: ObservableObject {
     private var countries: [Country] = []
     
     init() {
-        let apiService = APIServiceImpl()
-        
-        self.countryRepository = CountryRepositoryImpl(apiService: apiService)
-        self.fetchCountriesUseCase = FetchCountriesUseCaseImpl(countryRepository: countryRepository)
+        let injection = Injection.shared
+        self.countryRepository =  injection.countryRepository
+        self.fetchCountriesUseCase = injection.fetchCountriesUseCase
     }
     
-    // Fetch countries
+    //fetch countries
     func fetchCountries() {
         fetchCountriesUseCase.execute()
             .sink(receiveCompletion: { completion in
@@ -40,7 +39,7 @@ class CountriesViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    // Search countries
+    //search countries
     func searchCountries(query: String) {
         filteredCountries = query.isEmpty ? countries : countries.filter {
             $0.name.lowercased().contains(query.lowercased()) ||

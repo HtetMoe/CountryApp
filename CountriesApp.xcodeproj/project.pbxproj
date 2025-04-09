@@ -6,7 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0D3270782DA6C02000BE751D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0D3270772DA6C01A00BE751D /* README.md */; };
+		0D32707A2DA6C9C400BE751D /* Countries.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0D3270792DA6C9C400BE751D /* Countries.gif */; };
+		0DF009492DA62BB900127125 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0DF009482DA62BB900127125 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		0D3270772DA6C01A00BE751D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0D3270792DA6C9C400BE751D /* Countries.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Countries.gif; sourceTree = "<group>"; };
 		0DF0092F2DA62B6E00127125 /* CountriesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DF009492DA62BB900127125 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +54,10 @@
 		0DF009262DA62B6E00127125 = {
 			isa = PBXGroup;
 			children = (
+				0D3270772DA6C01A00BE751D /* README.md */,
 				0DF009312DA62B6E00127125 /* CountriesApp */,
 				0DF009302DA62B6E00127125 /* Products */,
+				0D3270792DA6C9C400BE751D /* Countries.gif */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +89,7 @@
 			);
 			name = CountriesApp;
 			packageProductDependencies = (
+				0DF009482DA62BB900127125 /* Alamofire */,
 			);
 			productName = CountriesApp;
 			productReference = 0DF0092F2DA62B6E00127125 /* CountriesApp.app */;
@@ -107,6 +119,9 @@
 			);
 			mainGroup = 0DF009262DA62B6E00127125;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0DF009472DA62BB900127125 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0DF009302DA62B6E00127125 /* Products */;
 			projectDirPath = "";
@@ -122,6 +137,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3270782DA6C02000BE751D /* README.md in Resources */,
+				0D32707A2DA6C9C400BE751D /* Countries.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +170,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -181,6 +199,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DF009472DA62BB900127125 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DF009482DA62BB900127125 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DF009472DA62BB900127125 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DF009272DA62B6E00127125 /* Project object */;
 }

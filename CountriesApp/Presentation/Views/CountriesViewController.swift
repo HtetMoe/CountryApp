@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CountriesApp
 //
-//  Created by Htet Moe Phyu on 4/8/25.
+//  Created by Htet Moe Phyu on 4/9/25.
 //
 
 import UIKit
@@ -13,9 +13,9 @@ class CountriesViewController: UIViewController {
     private var tableView: UITableView!
     private var searchController: UISearchController!
     
-    private var viewModel = CountriesViewModel()
+    private var viewModel    = CountriesViewModel()
     private var cancellables = Set<AnyCancellable>()
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
